@@ -1,0 +1,42 @@
+{
+    "optimization_inputs": {
+        "country": "Slovenia",
+        "year": 2040,
+        "annual_elec_demand_twh": 17.490000000000002,
+        "annual_h2_demand_twh": 0.9878750000000001,
+        "p2g_target_mw": 50,
+        "total_methane_demand_twh": 7.75,
+        "biomethane_potential_twh": 0.45,
+        "battery_capacity_mw": 1206.8,
+        "battery_storage_mwh": 2182.072222222222,
+        "battery_efficiency": 0.9200000000000004,
+        "synthetic_methane_share": 0.05
+    },
+    "elec_generators": {
+        "Solar": {
+            "p_nom": 5250.0,
+            "marginal_cost": 0.01,
+            "carrier": "solar"
+        },
+        "Nuclear": {
+            "p_nom": 696.0,
+            "marginal_cost": 12.0,
+            "carrier": "nuclear"
+        },
+        "Hydro": {
+            "p_nom": 1228.9,
+            "marginal_cost": 0.5,
+            "carrier": "hydro"
+        },
+        "Coal": {
+            "p_nom": 540.0,
+            "marginal_cost": 95.0,
+            "carrier": "coal"
+        },
+        "Wind": {
+            "p_nom": 305.5,
+            "marginal_cost": 0.01,
+            "carrier": "wind"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+configfile: 'input_file.yaml'
+
+rule all:
+    input:
+        expand("{data_set}/{inter_dir}/{project_name}/{scenario}/{year}/RES_profiles.csv",
+               data_set=config['data_set'],
+               inter_dir=config['inter_dir'],
+               scenario=config['scenario'],
+               year=config['year'],
+               project_name=config['project_name'])
+
+rule run_pipeline:
+    input:
+        "/content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/input_file.xlsx"
+    output:
+        "TYNDP_scenario_2024/intermediate_data/Europe/{scenario}/{year}/RES_profiles.csv"
+    shell:
+        """
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Reading_PEMMDB.py --scenario {wildcards.scenario} --year {wildcards.year}
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Reading_Demand_profiles.py --scenario {wildcards.scenario} --year {wildcards.year}
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Reading_Gas_Infrastructure.py --scenario {wildcards.scenario} --year {wildcards.year}
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Reading_Hydrogen.py --scenario {wildcards.scenario} --year {wildcards.year}
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Reading_RES_profiles.py --scenario {wildcards.scenario} --year {wildcards.year}
+        """

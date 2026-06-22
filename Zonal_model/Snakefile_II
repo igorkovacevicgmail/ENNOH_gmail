@@ -1,0 +1,20 @@
+configfile: 'input_file.yaml'
+
+rule all:
+    input:
+        expand("{data_set}/{model_data_dir}/{project_name}/{scenario}/{year}/model_data.json",
+               data_set=config['data_set'],
+               model_data_dir=config['model_data_dir'],
+               scenario=config['scenario'],
+               year=config['year'],
+               project_name=config['project_name'])
+
+rule run_pipeline:
+    input:
+        "/content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/input_file.xlsx"
+    output:
+        "TYNDP_scenario_2024/model_data/Europe/{scenario}/{year}/model_data.json"
+    shell:
+        """
+        python /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/modules/python_files/Intermediate_to_model_data.py --scenario {wildcards.scenario} --year {wildcards.year}
+        """

@@ -1,0 +1,34 @@
+CH4: false
+FLEX: true
+H2: true
+NTC: true
+Synthetic_fuels: false
+data_set: TYNDP_scenario_2024
+gas_infra_level: LOW
+input_data_path: /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model/input_file.xlsx
+inter_dir: intermediate_data
+model_data_dir: model_data
+prefix: /content/drive/MyDrive/Colab_Notebooks/ENNOH/Zonal_model
+project_name: Europe
+raw_data_dir: input_data
+regions: '["Albania", "Austria", "Belgium", "Bosnia and Herzegovina", "Bulgaria",
+  "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany",
+  "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
+  "Montenegro", "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal",
+  "Romania", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "United
+  Kingdom"]'
+result_dir: results
+scenario:
+- GA
+- DE
+share: 0.5
+weather_year: 2010
+year:
+- '2040'
+- '2050'
+zones: '["AL00", "AT00", "BA00", "BE00", "BG00", "CH00", "CY00", "CZ00", "DE00", "DKE1",
+  "DKW1", "EE00", "ES00", "FI00", "FR00", "GR00", "GR03", "HR00", "HU00", "IE00",
+  "ITCA", "ITCN", "ITCS", "ITN1", "ITS1", "ITSA", "ITSI", "LT00", "LUB1", "LUF1",
+  "LUG1", "LUV1", "LV00", "ME00", "SE02", "SE03", "SE04", "SI00", "SK00", "UK00",
+  "UKNI", "MK00", "MT00", "NL00", "NOM1", "NON1", "NOS0", "PL00", "PT00", "RO00",
+  "RS00", "SE01", "SE02", "SE03", "SE04", "SI00", "SK00", "UK00", "UKNI"]'

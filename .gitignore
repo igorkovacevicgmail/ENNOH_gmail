@@ -1,0 +1,17 @@
+
+# Ignore heavy data folders
+Zonal_model/TYNDP_scenario_2024/
+Zonal_model/TYNDP_scenario_2026/
+*TYNDP*2024*
+*2026*
+
+# Ignore heavy data files in Rest
+Rest/*.xlsx
+Rest/*.csv
+
+# Ignore heavy data files in Rest
+Rest/*.xlsx
+Rest/*.csv
+
+# Ignore files containing secrets
+Zonal_model/Modular_Model.ipynb
