@@ -14,4 +14,3 @@ Rest/*.xlsx
 Rest/*.csv
 
 # Ignore files containing secrets
-Zonal_model/Modular_Model.ipynb
